@@ -1,0 +1,373 @@
+/* Catatan !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Fungsi .container Memberi batasan Mas width pada div agar memiliki lebar maksimum 1170px 
+Color 
+Primary Color     : #212529
+Alternatif Color  : #343a40
+Font-Color        : #f8f9fa
+font-family       : font-family: 'Ubuntu', sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* mengatur semua font yang ada dalam body */
+  font-family: "Ubuntu", sans-serif;
+  background-color: #0a0a0a;
+}
+ul {
+  list-style: none;
+}
+li {
+  text-decoration: none;
+}
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*=========== bagian header */
+/* header {
+  width: 100%;
+} */
+
+.container-header {
+  display: flex;
+  flex: auto;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212529;
+  color: #f8f9fa;
+  height: 50px;
+}
+header h1 {
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.menubar {
+  display: flex;
+  list-style: none;
+}
+.menubar li:hover {
+  color: red;
+  cursor: pointer;
+  border-right: red solid 1px;
+  padding: 0 10px;
+  border-left: red solid 1px;
+}
+.menubar li {
+  margin: 0 10px;
+}
+/* memberikan margin kanan untuk li terakhir */
+.menubar li:last-child {
+  margin-right: 20px;
+}
+/* ================bagian konten */
+.content-wrapper {
+  height: auto;
+  background-color: #343a40;
+  width: 100%;
+  /* min-width: 635px; */
+}
+.top-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  height: 500px;
+  padding-top: 180px;
+  background-image: url("/src/images/darker-cover.png");
+  background-size: cover;
+}
+.heading {
+  color: #f8f9fa;
+  margin-bottom: 10px;
+}
+.description {
+  margin: 0 10%;
+  text-align: justify;
+  font-size: 24px;
+  color: #f8f9fa;
+}
+
+.menu-top {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  color: #f8f9fa;
+  border-top: solid red 1px;
+  background-color: #212529;
+}
+.categories {
+  padding: 0 20px;
+}
+.categories h3 {
+  line-height: 50px;
+}
+.categories-list {
+  display: flex;
+  width: 100%;
+}
+.categories-list a {
+  padding: 0 25px;
+  line-height: 50px;
+  color: inherit;
+  text-decoration: none;
+}
+.categories-list a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.categories-list a:last-child {
+  color: #f8f9fa;
+}
+.categories-list a:last-child:hover {
+  color: red;
+}
+.menu-top > span {
+  display: none;
+}
+/* .icon {
+  display: none;
+} */
+
+/* ========================Bagian Movies */
+.movies {
+  width: 100%;
+}
+.movies-list {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: solid red 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  /* border: solid red 3px; */
+  margin: 20px 10px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  transition: all 0.3s;
+  /* box-shadow: 0px 5px black; */
+}
+.card p {
+  text-align: center;
+  font-size: 14px;
+  color: #f8f9fa;
+}
+.card > img {
+  width: inherit;
+  height: inherit;
+}
+.card:hover {
+  cursor: pointer;
+  /* box-shadow: none; */
+}
+.card:active {
+  transform: translateY(10px);
+}
+.movies-list a {
+  text-decoration: none;
+}
+/* ================= Feedback-form */
+.feedback-form {
+  padding: 40px 0px;
+  text-align: center;
+  align-items: center;
+  background: #212529;
+}
+
+.feedback-form h3,
+p {
+  color: #f8f9fa;
+}
+
+.rating {
+  position: relative;
+  width: 400px;
+  background: #212529;
+  padding: 20px 30px;
+  margin-top: 20px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rating p {
+  padding-bottom: 20px;
+}
+
+.star-widget input {
+  display: none;
+}
+
+.star-widget label {
+  font-size: 40px;
+  color: #f8f9fa;
+  padding: 15px;
+  float: right;
+  transition: all 0.2s ease;
+  justify-content: center;
+}
+
+.star-widget input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+
+.star-widget input:checked ~ label {
+  color: #fd4;
+}
+
+.star-widget input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked ~ form header:before {
+  content: "I just hate it 😡";
+}
+
+#rate-2:checked ~ form header:before {
+  content: "I don't like it 🙁";
+}
+
+#rate-3:checked ~ form header:before {
+  content: "I is awesome 😄";
+}
+
+#rate-4:checked ~ form header:before {
+  content: "I just like it 😎";
+}
+
+#rate-5:checked ~ form header:before {
+  content: "I love it 😍";
+}
+
+.rating form {
+  display: none;
+}
+
+input:checked ~ form {
+  display: block;
+}
+
+form header {
+  width: 100%;
+  font-size: 25px;
+  display: inline-block;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+form .textarea-fb {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+form .textarea-fb textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid #333;
+  background-color: #343a40;
+  padding: 10px;
+  font-size: 17px;
+  color: #f8f9fa;
+  resize: none;
+}
+
+form .btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+form .btn button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #343a40;
+  color: #f8f9fa;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+/* ==============Footer=================== */
+.footer-wrapper {
+  background-color: rgb(48, 46, 46);
+  display: flex;
+}
+.footer-wrapper a {
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+.footer-list {
+  margin: 10px auto;
+}
+.footer-list h4 {
+  color: #f8f9fa;
+  padding-bottom: 5px;
+  border-bottom: solid 1px red;
+  margin-bottom: 10px;
+}
+
+.footer-list a:hover {
+  color: red;
+  transition: all 0.5s ease;
+}
+/* ================================= */
+.bottom-bar {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(26, 25, 25);
+  color: #f8f9fa;
+  display: flex;
+}
+.heading-bottom {
+  width: 33%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+}
+.copyright {
+  width: 33%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.medsos-list {
+  display: flex;
+}
+.copyright {
+  width: 100%;
+}
+.medsos-list li {
+  margin: auto 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.facebook:hover {
+  color: #4267b2;
+}
+.twitter:hover {
+  color: #1da1f2;
+}
+.instagram:hover {
+  color: #8a3ab9;
+}

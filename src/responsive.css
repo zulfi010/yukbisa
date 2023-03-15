@@ -1,0 +1,48 @@
+/* tablet */
+@media all and (max-width: 1000px) {
+}
+
+/* smartphone */
+@media all and (max-width: 670px) {
+  .container {
+    overflow-x: hidden;
+  }
+  .top-wrapper {
+    padding-top: 40px;
+  }
+  .categories {
+    display: none;
+  }
+  .categories-list {
+    justify-content: center;
+  }
+  .description p {
+    font-size: 20px;
+  }
+  .heading-bottom {
+    display: none;
+  }
+  .medsos-list {
+    display: none;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .rating {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .categories-list {
+    display: none;
+  }
+  .menu-top > span {
+    display: block;
+    margin: auto auto;
+  }
+  .heading-bottom {
+    display: none;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
